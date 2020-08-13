@@ -27,16 +27,20 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 sudo apt install ffmpeg
 sudo apt install imagemagick
 sudo apt install python3-pip
+
+# I like to have an alias that forces the python3 and pip3... so that's what I do:
 echo 'alias python=python3' >> ~/.bash_aliases
 echo 'alias pip=pip3' >> ~/.bash_aliases
 source ~/.bashrc
+
+# install a virtual environment to install all the youtube specific stuff we need
+cd
 pip install virtualenv
-python -m virtualenv sunsetpi
-source sunsetpi/bin/activate
+python -m virtualenv youtube
+source youtube/bin/activate
 python -m pip install google-api-python-client
-python -m pip install httplib2
-python -m pip install client
 python -m pip install oauth2client
+deactivate
 ```
 3. clone this project:
 ```
