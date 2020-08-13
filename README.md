@@ -47,7 +47,13 @@ git clone https://github.com/kevinabrandon/sunsetpi.git
 ```
 cd ~/sunsetpi
 crontab -e
-### TODO: show how to edit these
+```
+Add the following lines to the contab: 
+```
+# trigger the camera every minute
+* * * * * /home/pi/sunsetpi/triggercam.sh
+
+### TODO: show how to trigger the video upload
 ```
 5. Setup your project on google api console
 ```
