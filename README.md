@@ -6,7 +6,10 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 
 ## Future Plans
 * Daily backup photos to a network backup.
-* Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass. 
+* Use localized sunrise/sunset times to start and stop the timelapse.
+* Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
+* Automatically add royalty free music to the videos.
+* Automatically add title and end screens.
 
 ## Dependencies
 * [imagemagick](https://imagemagick.org/) - for resizing and cropping
@@ -14,11 +17,11 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 * [Google API Python Client](https://github.com/googleapis/google-api-python-client) - for uploading to youtube
 
 ## Reccomended Hardware
-1. Raspberry Pi 4 4-8GB (tested with a pi 3 b+ but was unable to encode higher than 1080p)
-2. Raspberry Pi HQ Camera
-3. Raspberry Pi HQ Camera Lens - Wide Angle
-4. Raspberry Pi PoE HAT
-5. Outdoor CCTV Camera Housing
+* [Raspberry Pi 4 4-8GB](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) (tested with a pi 3 b+ but was unable to encode higher than 1080p)
+* [Raspberry Pi HQ Camera](https://www.raspberrypi.org/products/raspberry-pi-high-quality-camera/)
+* [Raspberry Pi HQ Camera Lens - Wide Angle](https://www.canakit.com/raspberry-pi-hq-camera-6mm-wide-angle-lens.html)
+* [Raspberry Pi PoE HAT](https://www.raspberrypi.org/products/poe-hat/)
+* [Outdoor CCTV Camera Housing](https://www.amazon.com/gp/product/B015HSSMSQ/)
 
 ## Installation Instructions
 1. Setup a raspberry pi (preferably in [headless mode](https://desertbot.io/blog/headless-raspberry-pi-4-ssh-wifi-setup), but not required)
