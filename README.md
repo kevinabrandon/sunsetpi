@@ -10,6 +10,7 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 * Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
 * Automatically add royalty free music to the videos.
 * Automatically add title and end screens.
+* Slow down the timelapse around the sunset (trigger the camera every 15 seconds for the hours before and after sunset).
 
 ## Dependencies
 * [imagemagick](https://imagemagick.org/) - for resizing and cropping
@@ -57,10 +58,11 @@ crontab -e
 ```
 Add the following lines to the contab: 
 ```
-# trigger the camera every minute
-* * * * * /home/pi/sunsetpi/triggercam.sh
+# trigger the camera every minute:
+* * * * * $HOME/sunsetpi/triggercam.sh
 
-### TODO: show how to trigger the video upload
+# trigger the daily timelapse creation at 9:15 pm every day:
+15 21 * * * $HOME/sunsetpi/maketimelapse.sh
 ```
 5. Setup your project on google api console
 ```
