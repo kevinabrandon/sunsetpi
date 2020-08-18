@@ -1,15 +1,19 @@
-# sunsetpi - A raspberry pi powered daily automated timelapse project
+# sunsetpi - A raspberry pi powered, automated timelapse project
 
-Photos are taken every minute throughout the day. At the end of the day a 4k timelapse is encoded and automatically uploaded to youtube.
+Photos are taken regularly throughout the day.  At the end of the day a 4k timelapse is generated and uploaded to youtube.
 
 Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KIy-Mpz2MSu-qr2w9A) on youtube.
 
 ## Future Plans
 - [ ] Daily backup photos to an external drive.
+  - [ ] Daily backup to a network drive.
 - [ ] Use localized sunrise/sunset times to start and stop the timelapse.
-- [ ] Slow down the timelapse around the sunset (trigger the camera every 15 seconds for the hours before and after sunset).
-- [ ] Automatically add title and end screens.
+- [ ] Slow down the timelapse around the sunset or make a seperate sunset-only timelapse without affecting the day-long timelapse.
+- [ ] Automatically add title and end screens
+  * Perhaps use a photo with a Ken Burns effect with a title and the date in the subtitle.
 - [ ] Automatically add royalty free music to the videos.
+  * Would be cool to automatically scrape the youtube audio library.
+  * More likely I'll download a bunch of music, put it into a folder and cycle through them.
 - [ ] Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
 
 ## Dependencies
