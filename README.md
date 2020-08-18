@@ -5,12 +5,12 @@ Photos are taken every minute throughout the day. At the end of the day a 4k tim
 Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KIy-Mpz2MSu-qr2w9A) on youtube.
 
 ## Future Plans
-- [ ] Daily backup photos to a network backup.
+- [ ] Daily backup photos to an external drive.
 - [ ] Use localized sunrise/sunset times to start and stop the timelapse.
-- [ ] Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
-- [ ] Automatically add royalty free music to the videos.
-- [ ] Automatically add title and end screens.
 - [ ] Slow down the timelapse around the sunset (trigger the camera every 15 seconds for the hours before and after sunset).
+- [ ] Automatically add title and end screens.
+- [ ] Automatically add royalty free music to the videos.
+- [ ] Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
 
 ## Dependencies
 * [imagemagick](https://imagemagick.org/) - for resizing and cropping
