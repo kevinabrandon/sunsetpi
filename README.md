@@ -5,7 +5,7 @@ Photos are taken regularly throughout the day.  At the end of the day a 4k timel
 Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KIy-Mpz2MSu-qr2w9A) on youtube.
 
 ## Future Plans
-- [ ] Daily backup photos to an external drive.
+- [x] Add configuration to save data to an external drive.
   - [ ] Daily backup to a network drive.
 - [ ] Use localized sunrise/sunset times to start and stop the timelapse.
 - [ ] Slow down the timelapse around the sunset or make a seperate sunset-only timelapse without affecting the day-long timelapse.
@@ -65,10 +65,10 @@ crontab -e
 Add the following lines to the contab: 
 ```
 # trigger the camera every minute:
-* * * * * $HOME/sunsetpi/triggercam.sh
+* * * * * source $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh
 
 # trigger the daily timelapse creation at 9:15 pm every day:
-15 21 * * * $HOME/sunsetpi/maketimelapse.sh
+15 21 * * * source $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/maketimelapse.sh
 ```
 5. Setup your project on google api console
 ```
