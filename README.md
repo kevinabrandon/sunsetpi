@@ -32,7 +32,10 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 
 ## Installation Instructions
 1. Setup a raspberry pi (preferably in [headless mode](https://desertbot.io/blog/headless-raspberry-pi-4-ssh-wifi-setup), but not required)
-2. Install dependencies:
+2. Install an external hard drive and edit fstab so that it always mounts to the same location.
+    * This may be optional if you don't care to save the raw data.
+    * Carefully follow the instructions found [here](https://www.raspberrypi.org/documentation/configuration/external-storage.md).
+3. Install dependencies:
 ``` 
 sudo apt install ffmpeg
 sudo apt install imagemagick
@@ -52,12 +55,12 @@ python -m pip install google-api-python-client
 python -m pip install oauth2client
 deactivate
 ```
-3. clone this project:
+4. clone this project:
 ```
 cd
 git clone https://github.com/kevinabrandon/sunsetpi.git
 ```
-4. setup crontab:
+5. setup crontab:
 ```
 cd ~/sunsetpi
 crontab -e
@@ -70,15 +73,15 @@ Add the following lines to the contab:
 # trigger the daily timelapse creation at 9:15 pm every day:
 15 21 * * * source $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/maketimelapse.sh
 ```
-5. Setup your project on google api console
+6. Setup your project on google api console
 ```
 ### TODO: Add detail
 ```
-6. Create oauth2 credentials and put them in ~/sunsetpi/credentials.json
+7. Create oauth2 credentials and put them in ~/sunsetpi/credentials.json
 ```
 ### TODO: add detail
 ```
-7. Manually upload a first video so you can allow the project access to your youtube account.
+8. Manually upload a first video so you can allow the project access to your youtube account.
 ```
 ### TODO: show how to use the upload script
 ```
