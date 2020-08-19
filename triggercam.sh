@@ -15,9 +15,6 @@ else
   cropDir="$SUNSETPI_DATA_NO_MNT/timelapse-crop/$DAY"
 fi
 
-echo "Raw dir: $rawDir"
-echo "Crop dir: $cropDir"
-
 if [ $TIME -gt 210000 ] ; then
   echo "$TIME is after hours"
   exit 0
@@ -39,6 +36,8 @@ cropFile="$cropDir/$DATE.jpg"
 # right. So here we use 3 seconds.
 raspistill -t 3000 -o $rawFile -q 94
 
+echo $rawFile
+
 #### This is to resize for 1440p which a raspberry pi 3 b+ is able to
 #### enocde to mp4 using ffmpeg but it's occasionally runs out of memory
 # convert -resize 2844x -gravity center -crop 2560x1440+0+0 $rawFile $cropFile
@@ -49,3 +48,5 @@ raspistill -t 3000 -o $rawFile -q 94
 
 #### This is to resize to 2160p which must only be used on a high memory pi 4
 convert -gravity center -crop 3840x2160+0+0 $rawFile $cropFile
+
+echo $cropFile
