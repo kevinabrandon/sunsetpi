@@ -14,6 +14,7 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 - [ ] Automatically add royalty free music to the videos.
   * Would be cool to automatically scrape the youtube audio library.
   * More likely I'll download a bunch of music, put it into a folder and cycle through them.
+- [ ] Add image stablization to remove wind shaking.
 - [ ] Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
 
 ## Dependencies
