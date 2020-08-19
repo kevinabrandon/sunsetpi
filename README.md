@@ -27,6 +27,7 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 * [Raspberry Pi HQ Camera Lens - Wide Angle](https://www.canakit.com/raspberry-pi-hq-camera-6mm-wide-angle-lens.html)
 * [Raspberry Pi PoE HAT](https://www.raspberrypi.org/products/poe-hat/)
 * [Outdoor CCTV Camera Housing](https://www.amazon.com/gp/product/B015HSSMSQ/)
+* USB External Drive - it generates more than 5 GB of images a day and about 2 TB a year (assuming you want to save the raw images).
 
 ## Installation Instructions
 1. Setup a raspberry pi (preferably in [headless mode](https://desertbot.io/blog/headless-raspberry-pi-4-ssh-wifi-setup), but not required)
