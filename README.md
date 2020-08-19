@@ -68,10 +68,10 @@ crontab -e
 Add the following lines to the contab: 
 ```
 # trigger the camera every minute:
-* * * * * source $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh
+* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh
 
 # trigger the daily timelapse creation at 9:15 pm every day:
-15 21 * * * source $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/maketimelapse.sh
+15 21 * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/maketimelapse.sh
 ```
 6. Setup your project on google api console
 ```
