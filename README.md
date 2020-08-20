@@ -73,15 +73,25 @@ Add the following lines to the contab:
 # trigger the daily timelapse creation at 9:15 pm every day:
 15 21 * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/maketimelapse.sh
 ```
-6. Setup your project on google api console
+6. Download the NOAA Solar Calculations for the year
+    * Go to the [NOAA Solar Calculator](https://www.esrl.noaa.gov/gmd/grad/solcalc/) and enter in your gps location
+    * Click the "Create Sunrise/Sunset Tables for the Year" button
+    * Using the mouse select the text of each table and copy and paste them into a spreadsheet program (I used google sheets).
+    * Export each table as a csv file called:
+      * YYYY-sunrise.csv 
+      * YYYY-sunset.csv
+      * YYYY-solarnoon.csv
+    * Make the YYYY the current year
+    * Save the csv files into ~/sunsetpi/solartables/
+7. Setup your project on google api console
 ```
 ### TODO: Add detail
 ```
-7. Create oauth2 credentials and put them in ~/sunsetpi/credentials.json
+8. Create oauth2 credentials and put them in ~/sunsetpi/credentials.json
 ```
 ### TODO: add detail
 ```
-8. Manually upload a first video so you can allow the project access to your youtube account.
+9. Manually upload a first video so you can allow the project access to your youtube account.
 ```
 ### TODO: show how to use the upload script
 ```
