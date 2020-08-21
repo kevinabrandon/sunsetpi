@@ -1,7 +1,12 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # a program that reads in the noaa solar tables to find the
-# sunrise/solarnoon/sunset times for a given day
+# sunrise/solarnoon/sunset times for a given day.
+#
+# IMPORTANT: Please source the config.sh before calling this program.
+# And install the tables in $SUNSETPI_PATH/solartables/YYYY-TABLE.csv
+# Where YYYY is the year (example: 2020), and TABLE is the following:
+# "sunrise", "solarnoon", and "sunset"
 
 import os
 import csv
@@ -26,7 +31,23 @@ def getSolarTimes(dt):
 
 	return riseDT, noonDT, setDT
 
-rise, noon, set = getSolarTimes(datetime.now())
-print("Todays sunrise: ", rise)
-print("Todays noon:    ", noon)
-print("Todays sunset:  ", set)
+
+def main():
+	import sys
+
+	rise, noon, set = getSolarTimes(datetime.now())
+
+	if len(sys.argv) == 1:
+		print("Sunrise:", rise)
+		print("Noon:   ", noon)
+		print("Sunset: ", set)
+		return
+	if sys.argv[1] == "sunrise":
+		print("Sunrise:", rise)
+	elif sys.argv[1] == "noon":
+		print("Noon:   ", noon)
+	elif sys.argv[1] == "sunset":
+		print("Sunset: ", set)
+
+if __name__ == '__main__':
+	main()
