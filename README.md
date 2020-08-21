@@ -12,6 +12,7 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
   - [ ] Make a seperate sunset-only timelapse without affecting the day-long timelapse.
 - [ ] Automatically add title and end screens
   * Perhaps use a photo with a Ken Burns effect with a title and the date in the subtitle.
+- [ ] Make the youtube thumbnail be about 15 minutes before sunset.
 - [ ] Automatically add royalty free music to the videos.
   * Would be cool to automatically scrape the youtube audio library.
   * More likely I'll download a bunch of music, put it into a folder and cycle through them.
