@@ -7,8 +7,9 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 ## Future Plans
 - [x] Add configuration to save data to an external drive.
   - [ ] Daily backup to a network drive.
-- [ ] Use localized sunrise/sunset times to start and stop the timelapse.
-- [ ] Slow down the timelapse around the sunset or make a seperate sunset-only timelapse without affecting the day-long timelapse.
+- [x] Use localized sunrise/sunset times to start and stop the timelapse.
+- [x] Slow down the timelapse around the sunset.
+  - [ ] Make a seperate sunset-only timelapse without affecting the day-long timelapse.
 - [ ] Automatically add title and end screens
   * Perhaps use a photo with a Ken Burns effect with a title and the date in the subtitle.
 - [ ] Automatically add royalty free music to the videos.
@@ -60,20 +61,7 @@ deactivate
 cd
 git clone https://github.com/kevinabrandon/sunsetpi.git
 ```
-5. setup crontab:
-```
-cd ~/sunsetpi
-crontab -e
-```
-Add the following lines to the contab: 
-```
-# trigger the camera every minute:
-* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh
-
-# trigger the daily timelapse creation at 9:15 pm every day:
-15 21 * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/maketimelapse.sh
-```
-6. Download the NOAA Solar Calculations for the year
+5. Download the NOAA Solar Calculations for the year
     * Go to the [NOAA Solar Calculator](https://www.esrl.noaa.gov/gmd/grad/solcalc/) and enter in your gps location
     * Click the "Create Sunrise/Sunset Tables for the Year" button
     * Using the mouse select the text of each table and copy and paste them into a spreadsheet program (I used google sheets).
@@ -83,6 +71,22 @@ Add the following lines to the contab:
       * YYYY-solarnoon.csv
     * Make the YYYY the current year
     * Save the csv files into ~/sunsetpi/solartables/
+6. setup crontab:
+```
+crontab -e
+```
+Add the following lines to the contab: 
+```
+# trigger the camera every minute:
+* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh
+# trigger the camera on the 15, 30 and 45 seconds of each minute for the sunset portion:
+* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh 15
+* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh 30
+* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh 45
+
+# trigger the daily timelapse creation at 9:15 pm every day:
+15 21 * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/maketimelapse.sh
+```
 7. Setup your project on google api console
 ```
 ### TODO: Add detail
