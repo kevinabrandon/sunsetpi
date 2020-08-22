@@ -18,6 +18,8 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
   * More likely I'll download a bunch of music, put it into a folder and cycle through them. **(this is what I did)**
 - [ ] Add image stablization to remove wind shaking.
 - [ ] Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
+- [ ] Automatically maintain monthly playlists on youtube (August 2020, September 2002, etc.).
+- [ ] Make the latest video always the featured video on the channel.
 
 ## Dependencies
 * [imagemagick](https://imagemagick.org/) - for resizing and cropping
