@@ -24,8 +24,10 @@ for i in *.jpg; do
   let a=a+1
 done
 
+musicPath=`$SUNSETPI_PATH/daily-music.py path`
+
 # encode the mp4:
-ffmpeg -start_number 1 -i %04d.jpg -c:v libx264 -pix_fmt yuv420p $outFile
+ffmpeg -start_number 1 -i %04d.jpg -i "$musicPath" -shortest -c:v libx264 -pix_fmt yuv420p $outFile
 
 # upload the mp4 to youtube:
 $SUNSETPI_PATH/upload.sh
