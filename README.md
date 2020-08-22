@@ -13,9 +13,9 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 - [ ] Automatically add title and end screens
   * Perhaps use a photo with a Ken Burns effect with a title and the date in the subtitle.
 - [ ] Make the youtube thumbnail be about 15 minutes before sunset.
-- [ ] Automatically add royalty free music to the videos.
-  * Would be cool to automatically scrape the youtube audio library.
-  * More likely I'll download a bunch of music, put it into a folder and cycle through them.
+- [x] Automatically add royalty free music to the videos.
+  * ~~Would be cool to automatically scrape the youtube audio library.~~
+  * More likely I'll download a bunch of music, put it into a folder and cycle through them. **(this is what I did)**
 - [ ] Add image stablization to remove wind shaking.
 - [ ] Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
 
