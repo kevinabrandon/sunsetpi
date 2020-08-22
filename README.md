@@ -1,32 +1,32 @@
-# sunsetpi - A raspberry pi powered, automated timelapse project
+# sunsetpi - A Raspberry Pi powered, automated time-lapse project
 
-Photos are taken regularly throughout the day.  At the end of the day a 4k timelapse is generated and uploaded to youtube.
+Photos are taken regularly throughout the day.  At the end of the day a 4k time-lapse is generated and uploaded to YouTube.
 
-Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KIy-Mpz2MSu-qr2w9A) on youtube.
+Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KIy-Mpz2MSu-qr2w9A) on YouTube.
 
 ## Future Plans
 - [x] Add configuration to save data to an external drive.
   - [ ] Daily backup to a network drive.
-- [x] Use localized sunrise/sunset times to start and stop the timelapse.
-- [x] Slow down the timelapse around the sunset.
-  - [ ] Make a seperate sunset-only timelapse without affecting the day-long timelapse.
+- [x] Use localized sunrise/sunset times to start and stop the time-lapse.
+- [x] Slow down the time-lapse around the sunset.
+  - [ ] Make a separate sunset-only time-lapse without affecting the day-long time-lapse.
 - [ ] Automatically add title and end screens
   * Perhaps use a photo with a Ken Burns effect with a title and the date in the subtitle.
-- [ ] Make the youtube thumbnail be about 15 minutes before sunset.
+- [ ] Make the YouTube thumbnail be about 15 minutes before sunset.
 - [x] Automatically add royalty free music to the videos.
-  * ~~Would be cool to automatically scrape the youtube audio library.~~
+  * ~~Would be cool to automatically scrape the YouTube audio library.~~
   * More likely I'll download a bunch of music, put it into a folder and cycle through them. **(this is what I did)**
-- [ ] Add image stablization to remove wind shaking.
-- [ ] Make a multi-year long timelapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
-- [ ] Automatically maintain monthly playlists on youtube (August 2020, September 2002, etc.).
+- [ ] Add image stabilization to remove wind shaking.
+- [ ] Make a multi-year long time-lapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
+- [ ] Automatically maintain monthly playlists on YouTube (August 2020, September 2020, etc.).
 - [ ] Make the latest video always the featured video on the channel.
 
 ## Dependencies
 * [imagemagick](https://imagemagick.org/) - for resizing and cropping
 * [ffmpeg](https://ffmpeg.org/) - for encoding video
-* [Google API Python Client](https://github.com/googleapis/google-api-python-client) - for uploading to youtube
+* [Google API Python Client](https://github.com/googleapis/google-api-python-client) - for uploading to YouTube
 
-## Reccomended Hardware
+## Recommended Hardware
 * [Raspberry Pi 4 4-8GB](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) (tested with a pi 3 b+ but was unable to encode higher than 1080p)
 * [Raspberry Pi HQ Camera](https://www.raspberrypi.org/products/raspberry-pi-high-quality-camera/)
 * [Raspberry Pi HQ Camera Lens - Wide Angle](https://www.canakit.com/raspberry-pi-hq-camera-6mm-wide-angle-lens.html)
@@ -35,7 +35,7 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 * USB External Drive - it generates more than 5 GB of images a day and about 2 TB a year (assuming you want to save the raw images).
 
 ## Installation Instructions
-1. Setup a raspberry pi (preferably in [headless mode](https://desertbot.io/blog/headless-raspberry-pi-4-ssh-wifi-setup), but not required)
+1. Setup a Raspberry Pi (preferably in [headless mode](https://desertbot.io/blog/headless-raspberry-pi-4-ssh-wifi-setup), but not required)
 2. Install an external hard drive and edit fstab so that it always mounts to the same location.
     * This may be optional if you don't care to save the raw data.
     * Carefully follow the instructions found [here](https://www.raspberrypi.org/documentation/configuration/external-storage.md).
@@ -50,7 +50,7 @@ echo 'alias python=python3' >> ~/.bash_aliases
 echo 'alias pip=pip3' >> ~/.bash_aliases
 source ~/.bashrc
 
-# install a virtual environment to install all the youtube specific stuff we need
+# install a virtual environment to install all the YouTube specific stuff we need
 cd
 pip install virtualenv
 python -m virtualenv youtube
@@ -87,10 +87,10 @@ Add the following lines to the contab:
 * * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh 30
 * * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh 45
 
-# trigger the daily timelapse creation at 9:15 pm every day:
+# trigger the daily time-lapse creation at 9:15 pm every day:
 15 21 * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/maketimelapse.sh
 ```
-7. Setup your project on google api console
+7. Setup your project on Google API Console
 ```
 ### TODO: Add detail
 ```
@@ -98,7 +98,7 @@ Add the following lines to the contab:
 ```
 ### TODO: add detail
 ```
-9. Manually upload a first video so you can allow the project access to your youtube account.
+9. Manually upload a first video so you can allow the project access to your YouTube account.
 ```
 ### TODO: show how to use the upload script
 ```
