@@ -10,14 +10,18 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
 - [x] Use localized sunrise/sunset times to start and stop the time-lapse.
 - [x] Slow down the time-lapse around the sunset.
   - [ ] Make a separate sunset-only time-lapse without affecting the day-long time-lapse.
-- [ ] Automatically add title and end screens
+- [x] Automatically add title ~~and end~~ screens
   * Perhaps use a photo with a Ken Burns effect with a title and the date in the subtitle.
+  - [ ] Make the title photo a picture of the daily sunset.
 - [ ] Make the YouTube thumbnail be about 15 minutes before sunset.
 - [x] Automatically add royalty free music to the videos.
   * ~~Would be cool to automatically scrape the YouTube audio library.~~
   * More likely I'll download a bunch of music, put it into a folder and cycle through them. **(this is what I did)**
 - [ ] Add image stabilization to remove wind shaking.
-- [ ] Make a multi-year long time-lapse of each solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
+- [ ] Make long term time-lapses of solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
+  - [ ] Automatically make a monthly time-lapse.
+  - [ ] Automatically make a yearly time-lapse.
+  - [ ] Make multi-year time-lapses.
 - [ ] Automatically maintain monthly playlists on YouTube (August 2020, September 2020, etc.).
 - [ ] Make the latest video always the featured video on the channel.
 
