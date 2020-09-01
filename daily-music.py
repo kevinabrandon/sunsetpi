@@ -35,8 +35,8 @@ def getMusic(dt):
 		if file.endswith(".mp3"):
 			mp3s.append(file)
 
-	path = os.path.join(musicDir, mp3s[dt.day])
-	title = mp3s[dt.day][:-4].replace("-", "by")
+	path = os.path.join(musicDir, mp3s[dt.day-1])
+	title = mp3s[dt.day-1][:-4].replace("-", "by")
 
 	return path, title
 
