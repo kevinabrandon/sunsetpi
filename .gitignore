@@ -5,3 +5,5 @@ solartables/
 music/
 .DS_Store
 title-image.jpg
+music-monthly-recap
+__pycache__
