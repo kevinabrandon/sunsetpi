@@ -5,7 +5,7 @@
 #
 # IMPORTANT: Please source the config.sh before calling this program.
 #
-# USAGE: daily-music.py [path/info]
+# USAGE: daily-music.py [path/info] {optional day}
 #  If the argument is path, it will print the full path for the mp3.
 #  If the argument is info, it will print the songs title and artist.
 #
@@ -22,7 +22,7 @@
 import os
 from datetime import datetime
 
-def getMusic(dt):
+def getMusic(day):
 	"""
 	getMusic takes a datetime and returns the music for that day. It
 	returns the full path of the mp3 file, the song title and the artist.
@@ -35,8 +35,8 @@ def getMusic(dt):
 		if file.endswith(".mp3"):
 			mp3s.append(file)
 
-	path = os.path.join(musicDir, mp3s[dt.day-1])
-	title = mp3s[dt.day-1][:-4].replace("-", "by")
+	path = os.path.join(musicDir, mp3s[day-1])
+	title = mp3s[day-1][:-4].replace("-", "by")
 
 	return path, title
 
@@ -44,15 +44,19 @@ def main():
 	import sys
 
 	def usage():
-		print("usage: " + sys.argv[0] + " [path/info]")
+		print("usage: " + sys.argv[0] + " [path/info]  {optional day}")
 		print(" If the argument is path, it will print the full path for the mp3.")
 		print(" If the argument is info, it will print the songs title and artist.")
 		sys.exit(2)
 
-	if len(sys.argv) != 2:
+	if len(sys.argv) != 2 and len(sys.argv) != 3:
 		usage()
 
-	path, info = getMusic(datetime.now())
+	day = datetime.now().day
+	if len(sys.argv) == 3:
+		day = int(sys.argv[2])
+
+	path, info = getMusic(day)
 
 	if sys.argv[1] == "path":
 		print(path)
