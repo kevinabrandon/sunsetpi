@@ -29,6 +29,8 @@ desc=$(printf "Daily time-lapse for %s.\nCaptured, processed, encoded, and uploa
 
 source $HOME/youtube/bin/activate
 
+echo "$timelapseFile"
+
 python $SUNSETPI_PATH/upload-video.py \
    --file "$timelapseFile" \
    --title "Daily Time-Lapse $DAY" \
