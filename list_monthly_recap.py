@@ -80,7 +80,7 @@ def main():
 	usage: monthlyRecapList.py [year] [month] [nPhotosPerDay]
 
 	Lists all the recap photos for the given month of the year.
-	When run with no arguments, it uses the previous month with 120 photos per day.
+	When run with no arguments, it uses the previous month with 80 photos per day.
 	'''
 	import sys
 	import previous_month
@@ -88,7 +88,7 @@ def main():
 	# by default run the previous month:
 	year, month = previous_month.previousMonth()
 
-	nPhotosPerDay = 120 # 120 photos is 4 seconds at 30 fps or 5 seconds at 24 fps
+	nPhotosPerDay = 80 # 80 photos is 2.66 seconds at 30 fps or 3.2 seconds at 25 fps
 
 	if len(sys.argv) > 3:
 		year = int(sys.argv[1])

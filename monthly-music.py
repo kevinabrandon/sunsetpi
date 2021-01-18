@@ -19,7 +19,7 @@
 #  Attribution not required (although I do attribute it).
 #
 # It's important that the songs be long enough. The recap videos will
-# have a maximum time of 2m34.8s
+# have a maximum time of 1m45.2s
 #
 
 import os

@@ -23,7 +23,7 @@
 
 # get a list of all the images for the timelapse
 # if there are 3 arguments assume they're [year] [month] [nPicsPerDay]
-# if no arguments assume it's the previous month with 120 pics per day
+# if no arguments assume it's the previous month with 80 pics per day
 if [ $# -eq 3 ]; then
   allPics=`$SUNSETPI_PATH/list_monthly_recap.py $1 $2 $3`
   year=$1
@@ -37,7 +37,7 @@ fi
 # directories
 cropDir="$SUNSETPI_DATA_PATH/timelapse-crop/$year-$month"
 tempDir="$SUNSETPI_DATA_PATH/timelapse-temp/$year-$month"
-outDir="$SUNSETPI_DATA_PATH/timelapse-mp4s/"
+outDir="$SUNSETPI_DATA_PATH/timelapse-mp4s"
 
 mkdir -p "$tempDir"
 mkdir -p "$cropDir"
