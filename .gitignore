@@ -1,9 +1,9 @@
 *.json
 timelapse/
 logs/
-solartables/
-music/
+solar-tables/
+daily-music/
 .DS_Store
 title-image.jpg
-music-monthly-recap
+monthly-music/
 __pycache__

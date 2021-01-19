@@ -68,8 +68,8 @@ for i in *.jpg; do
 done
 
 # get the daily music path and info
-musicPath=`$SUNSETPI_PATH/monthly-music.py path $month`
-musicInfo=`$SUNSETPI_PATH/monthly-music.py info $month`
+musicPath=`$SUNSETPI_PATH/monthly_music.py path $month`
+musicInfo=`$SUNSETPI_PATH/monthly_music.py info $month`
 
 # make title
 frameRate=25
@@ -84,7 +84,7 @@ boxAlpha=0.25
 titleText="Nipomo Sunset Pi"
 titleSize=144
 
-subtitleText="Recap Time-lapse for `date --date="$(printf "%s-%s-01" $year $month)" +"%B %Y"`"
+subtitleText="Recap Time-lapse for `date --date="$(printf "%s-%s-01" $year $month)" +"%B %Y"` (Starting on the 21st)"
 subtitleSize=108
 
 musicTitleText="Music\: $musicInfo"

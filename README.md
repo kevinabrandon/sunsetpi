@@ -77,7 +77,7 @@ git clone https://github.com/kevinabrandon/sunsetpi.git
       * YYYY-sunset.csv
       * YYYY-solarnoon.csv
     * Make the YYYY the current year
-    * Save the csv files into ~/sunsetpi/solartables/
+    * Save the csv files into ~/sunsetpi/solar-tables/
 6. setup crontab:
 ```
 crontab -e
@@ -85,24 +85,16 @@ crontab -e
 Add the following lines to the contab: 
 ```
 # trigger the camera every minute:
-* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh
+* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/trigger_cam.sh
 # trigger the camera on the 15, 30 and 45 seconds of each minute for the sunset portion:
-* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh 15
-* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh 30
-* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/triggercam.sh 45
+* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/trigger_cam.sh 15
+* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/trigger_cam.sh 30
+* * * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/trigger_cam.sh 45
 
 # trigger the daily time-lapse creation at 9:15 pm every day:
-15 21 * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/maketimelapse.sh
+15 21 * * * . $HOME/sunsetpi/config.sh; $SUNSETPI_PATH/make_daily_timelapse.sh
 ```
 7. Setup your project on Google API Console
-```
-### TODO: Add detail
-```
-8. Create oauth2 credentials and put them in ~/sunsetpi/credentials.json
-```
-### TODO: add detail
-```
-9. Manually upload a first video so you can allow the project access to your YouTube account.
-```
-### TODO: show how to use the upload script
-```
+8. From the Google API Console create oauth2 credentials and put them in ~/sunsetpi/credentials.json
+9. After the first day of photos manually run the make_daily_timelapse.sh so that you are able to follow the youtube authorization instructions in the console.
+10. For now on the auth is saved and the make_daily_timelapse.sh can be run via cron each day.

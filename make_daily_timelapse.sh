@@ -51,8 +51,8 @@ for i in *.jpg; do
 done
 
 # get the daily music path and info
-musicPath=`$SUNSETPI_PATH/daily-music.py path`
-musicInfo=`$SUNSETPI_PATH/daily-music.py info`
+musicPath=`$SUNSETPI_PATH/daily_music.py path`
+musicInfo=`$SUNSETPI_PATH/daily_music.py info`
 
 # make title
 frameRate=25
@@ -134,6 +134,6 @@ ffmpeg \
 echo "$outFile"
 
 # upload the mp4 to youtube:
-$SUNSETPI_PATH/upload.sh
+$SUNSETPI_PATH/upload_daily_timelapse.sh
 
 

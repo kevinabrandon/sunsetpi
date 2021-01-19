@@ -51,11 +51,11 @@ fi
 
 # get the sunrise and sunset times from the python script and parse out the
 # output to get the times without the colons
-sunriseTime=`$SUNSETPI_PATH/solar-times.py sunrise | \
+sunriseTime=`$SUNSETPI_PATH/solar_times.py sunrise | \
   awk {'print $NF'} | \
   awk -F ':' {'print $1 $2 $3'}`
 
-sunsetTime=`$SUNSETPI_PATH/solar-times.py sunset | \
+sunsetTime=`$SUNSETPI_PATH/solar_times.py sunset | \
   awk {'print $NF'} | \
   awk -F ':' {'print $1 $2 $3'}`
 

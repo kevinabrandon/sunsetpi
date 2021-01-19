@@ -15,7 +15,7 @@ import time
 
 def getSolarTimes(dt):
 	projectDir = os.getenv("SUNSETPI_PATH", "/home/pi/sunsetpi")
-	prefix = projectDir+"/solartables/"+str(dt.year)
+	prefix = projectDir+"/solar-tables/"+str(dt.year)
 
 	riseData = list(csv.reader(open(prefix+'-sunrise.csv')))
 	noonData = list(csv.reader(open(prefix+'-solarnoon.csv')))
