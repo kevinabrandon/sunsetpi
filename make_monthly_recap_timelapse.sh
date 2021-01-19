@@ -84,7 +84,7 @@ boxAlpha=0.25
 titleText="Nipomo Sunset Pi"
 titleSize=144
 
-subtitleText="Recap Time-lapse for `date --date="$(printf "%s-%s-01" $year $month)" +"%B %Y"` (Starting on the 21st)"
+subtitleText="Recap Time-lapse for `date --date="$(printf "%s-%s-01" $year $month)" +"%B %Y"`"
 subtitleSize=108
 
 musicTitleText="Music\: $musicInfo"
