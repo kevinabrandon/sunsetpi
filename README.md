@@ -18,10 +18,10 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
   * ~~Would be cool to automatically scrape the YouTube audio library.~~
   * More likely I'll download a bunch of music, put it into a folder and cycle through them. **(this is what I did)**
 - [ ] Add image stabilization to remove wind shaking.
-- [ ] Make long term time-lapses of solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
+- [x] Make long term time-lapses of solar noon, and of each sunset showing how the sun moves across the horizon as the seasons pass.
   - [x] Automatically make a monthly time-lapse.
-  - [ ] Automatically make a yearly time-lapse.
-  - [ ] Make multi-year time-lapses.
+  - [x] Make a yearly time-lapse.
+  - [x] Make multi-year time-lapses.
 - [ ] Automatically maintain monthly playlists on YouTube (August 2020, September 2020, etc.).
 - [ ] Make the latest video always the featured video on the channel.
 
