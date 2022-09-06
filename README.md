@@ -24,6 +24,7 @@ Currently running at [Nipomo Sunset Pi](https://www.youtube.com/channel/UCCDV0KI
   - [x] Make multi-year time-lapses.
 - [ ] Automatically maintain monthly playlists on YouTube (August 2020, September 2020, etc.).
 - [ ] Make the latest video always the featured video on the channel.
+- [ ] Integrate with weather API to show daily high and low teperatures and daily rainfall.
 
 ## Dependencies
 * [imagemagick](https://imagemagick.org/) - for resizing and cropping
